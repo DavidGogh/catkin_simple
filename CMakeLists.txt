@@ -5,5 +5,5 @@ find_package(catkin REQUIRED)
 
 catkin_package(
   CATKIN_DEPENDS catkin
-  CFG_EXTRAS catkin_simple-extras.cmake
+  CFG_EXTRAS catkin_simple-extras.cmake catkin_simple-my-extras.cmake
 )

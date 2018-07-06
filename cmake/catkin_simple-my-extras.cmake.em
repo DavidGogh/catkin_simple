@@ -1,0 +1,21 @@
+if(_CATKIN_SIMPLE_MY_EXTRAS_INCLUDED_)
+  return()
+endif()
+set(_CATKIN_SIMPLE_MY_EXTRAS_INCLUDED_ TRUE)
+
+# credit: https://groups.google.com/d/msg/ros-sig-buildsystem/XS-9OU8T5PM/AsFFNdvCbFwJ
+macro(use_boost)
+  message(STATUS "Using Boost")
+  find_package(Boost REQUIRED)
+  include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
+  link_directories(${Boost_LIBRARY_DIRS})
+  link_libraries(${Boost_LIBRARIES})
+endmacro()
+
+macro(use_eigen)
+  message(STATUS "Using Eigen")
+  find_package(Eigen REQUIRED)
+  include_directories(SYSTEM ${EIGEN_INCLUDE_DIRS})
+  link_directories(${EIGEN_LIBRARY_DIRS})
+  link_libraries(${EIGEN_LIBRARIES})
+endmacro() 
